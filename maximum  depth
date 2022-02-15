@@ -1,0 +1,9 @@
+
+int maxDepth(struct TreeNode* root){
+    if(root == NULL)   // if root equal to null return 0
+            return 0;
+        return fmax(1 + maxDepth(root -> left), 1+ maxDepth(root -> right));  
+    
+
+    
+}
