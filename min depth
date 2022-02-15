@@ -1,0 +1,14 @@
+
+int minDepth(struct TreeNode* root){
+    if(root == NULL)   // if root equal to null return 0
+            return 0;
+      
+         int left = minDepth(root->left);
+         int right = minDepth(root->right);
+         if(left == 0 || right == 0)
+             return 1+fmax(left,right);//skewed tree
+        
+    return 1+fmin(left,right);
+
+    
+}
