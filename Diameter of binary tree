@@ -1,0 +1,19 @@
+int diameter =0;
+int diameterOfBinaryTree(struct TreeNode* root) {
+    // int diameter =0;
+    int temp = dfsheight(root);
+    return diameter;
+}
+
+int dfsheight(struct TreeNode* root ){
+    
+    if(root == NULL) return 0;
+    
+    int lh = dfsheight(root->left );
+    int rh = dfsheight(root->right);
+    
+    diameter = fmax(diameter, lh+rh);
+    
+    return 1 + fmax(lh,rh);
+    
+}
